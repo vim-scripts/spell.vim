@@ -1,0 +1,43 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=232
+
+
+Vim plugin for using the 'spell' Unix utility.  Provides commands to spell
+check the current buffer, or a range of lines in the current buffer, current
+word or a supplied string and to highlight misspelled words.  This plugin
+provides the functionality similar to that provided by the emacs spell.el
+script.
+
+This plugin provides the following commands: 
+
+   1. Spell
+      Spell check lines in the current buffer.  The default behavior is to
+      spell check the entire buffer. You can specify an ex command-line
+      range to spell check only lines in that range. If a word is
+      misspelled, you will be prompted to enter the correct spelling for the
+      word.  If you enter the correct spelling, then you will be prompted
+      for replacing every occurrence of that word in the current buffer.  If
+      you press just enter, then the word will be skipped.  If you press
+      <Esc>, the spell check will be stopped. 
+
+   2. SpellWord 
+      Check the spelling of the current word under the cursor. If the word
+      is misspelled, you will be prompted for the correct spelling.  If you
+      enter the correct spelling, you will be prompted for replacing every
+      occurrence of that word in the current buffer.  If you press just
+      enter, then the word will be skipped. 
+
+   3. SpellString <string> 
+      Check the spelling of the supplied string.  All the misspelled words
+      in the string will be displayed. 
+
+   4. SpellHighlight
+      Highlight all the misspelled words in the current buffer. This command
+      also takes a range of lines.
+
+   5. SpellHighlightClear
+      Clear the highlighting for the misspelled words.
+
+The 'spell' utility only checks the spelling and will not provide the 
+alternatives (correct spelling) for a word.  As this plugin depends on the 
+'spell' utility, you will not get the correct spelling for a word.  You will 
+only know whether a word is spelled correctly or not.
